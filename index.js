@@ -46,7 +46,7 @@
         kg: kg.value,
         Fabricado: fabricado.value,
         Validade: validade.value,
-        Observação: observacao.value
+        Observacao: observacao.value
     }).then(() => {
        alert("Produto Alimentos enviado") 
     }).catch((error)=> {
@@ -66,7 +66,7 @@
              kg.value = snapshot.val().kg;
              fabricado.value = snapshot.val().Fabricado;
              validade.value = snapshot.val().Validade;
-             observacao.value = snapshot.val().Observação;
+             observacao.value = snapshot.val().Observacao;
          }
          else {
              alert("Produto não encontrado, digite o mesmo nome que foi enviado")
