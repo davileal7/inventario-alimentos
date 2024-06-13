@@ -33,7 +33,7 @@
  var observacao = document.getElementById("obs")
 
 
- var aliBtn = document.getElementById("Alibtn")
+ var Insbtn = document.getElementById("Insbtn")
  var selBtn = document.getElementById("Selbtn")
  
 
@@ -77,7 +77,7 @@
  }
 
 
- aliBtn.addEventListener('click', InserirAlimento)
+ Insbtn.addEventListener('click', InserirAlimento)
  selBtn.addEventListener('click', SelectData)
 
  
