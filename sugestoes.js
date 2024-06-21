@@ -73,8 +73,13 @@ let suggestions = [
         "CAPELLETI ",
         "CARNE CURADA DESF",
         "CARNE MOIDA",
+        "CARNE MOIDA REFOGADA",
         "CARNE SECA ",
         "CARNE SECA DESFIADA",
+        "CARNE SECA TRASEIRO",
+
+
+
         "CASTANHA DE CAJU",
         "CATUPIRY ",
         "CEBOLA",
@@ -360,7 +365,15 @@ let suggestions = [
         "BROA DE FUBA",
         "COPINHO GELATO",
         "FERRERO ROCHER T3",
-        "GELATO DE CREME",
+        "FINI BANANAS",
+        "FINI DENTADURA",
+        "FINI MINHOCA CITRICA",
+        "GELATO BRIGADEIRO DO TIO GU",
+        "GELATO CHOCOLATE BELGA",
+        "GELATO CREME",
+        "GELATO MIONINHO",
+        "GELATO MORANGO ZERO LACTOSE",
+
         "HALLS 84G",
         "KINDER TRONKY",
         "KIT KAT BRANCO 41,5G",
@@ -382,4 +395,17 @@ let suggestions = [
         "TIC TAC MORANGO 14G",
         "TRIDENT HORTELA 8G",
         "TRIDENT MENTA 8G",
+
+
+
+        "CIGARRO DUNHILL CARLTON",
+        "CIGARRO DUNHILL RED BOX",
+        "CIGARRO MARLBORO BLUE ICE MENT",
+        "CIGARRO MARLBORO BOX",
+        "CIGARRO MARLBORO DOUBLE FUSION",
+        "CIGARRO MARLBORO DOUBLE MIX",
+        "CIGARRO MARLBORO FILTER PLUS",
+        "CIGARRO MARLBORO LI BOX",
+        "CIGARRO MARLBORO TROPICAL FUSION",
+
 ]
