@@ -53,6 +53,16 @@
     }).catch((error)=> {
         alert("falha, error"+error)
     })
+
+    
+    alimentos.value = ""
+    unidade.value = ""
+    ml.value = ""
+    kg.value = ""
+    fabricado.value = ""
+    validade.value = ""
+    observacao.value = ""
+
 }
 
 //--------------Select Datas----------------------------------------------//
