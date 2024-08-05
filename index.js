@@ -36,8 +36,6 @@
  var Insbtn = document.getElementById("Insbtn")
  var selBtn = document.getElementById("Selbtn")
 
-
-
 //--------------ENVIAR----------------------------------------------//
  
  function InserirAlimento(){
@@ -47,12 +45,14 @@
         return;
       }
 
-    set(ref(db, "Alimentos/"+ alimentos.value), {
-        Estoque_Atual: unidade.value,
-        Litros: ml.value,
-        kg: kg.value,
-        Fabricado: fabricado.value,
-        Validade: validade.value,
+      set(ref(db, "Produtos/ " + alimentos.value + " | Estoque Atual: " + unidade.value + " | Litros: " 
+        + ml.value + " | Kg: " + kg.value + " | Fabricado: " + fabricado.value + " | Validade: " + validade.value
+    ), {
+        //Estoque_Atual: unidade.value,
+        //Litros: ml.value,
+        //kg: kg.value,
+        //Fabricado: fabricado.value,
+        //Validade: validade.value,
         Observacao: observacao.value
     }).then(() => {
        alert("Produto Alimentos enviado") 
