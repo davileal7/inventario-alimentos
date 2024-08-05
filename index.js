@@ -41,6 +41,12 @@
 //--------------ENVIAR----------------------------------------------//
  
  function InserirAlimento(){
+
+    if (alimentos.value === '') {
+        alert("Preencha o nome do produto!");
+        return;
+      }
+
     set(ref(db, "Alimentos/"+ alimentos.value), {
         Estoque_Atual: unidade.value,
         Litros: ml.value,
