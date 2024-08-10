@@ -45,14 +45,13 @@
         return;
       }
 
-      set(ref(db, "Produtos/ " + alimentos.value + " | Estoque Atual: " + unidade.value + " | Litros: " 
-        + ml.value + " | Kg: " + kg.value + " | Fabricado: " + fabricado.value + " | Validade: " + validade.value
+      set(ref(db,"Produtos/" + alimentos.value 
     ), {
-        //Estoque_Atual: unidade.value,
-        //Litros: ml.value,
-        //kg: kg.value,
-        //Fabricado: fabricado.value,
-        //Validade: validade.value,
+        Estoque_Atual: unidade.value,
+        Litros: ml.value,
+        kg: kg.value,
+        Fabricado: fabricado.value,
+        Validade: validade.value,
         Observacao: observacao.value
     }).then(() => {
        alert("Produto Alimentos enviado") 
@@ -76,7 +75,7 @@
  function SelectData(){
      const dbref = ref(db);
 
-     get(child(dbref,"Alimentos/"+ alimentos.value)).then((snapshot) => {
+     get(child(dbref,"Produtos/" + alimentos.value)).then((snapshot) => {
          if(snapshot.exists()){
              unidade.value = snapshot.val().Estoque_Atual;
              ml.value = snapshot.val().Litros;
@@ -86,7 +85,7 @@
              observacao.value = snapshot.val().Observacao;
          }
          else {
-             alert("Produto não encontrado, digite o mesmo nome que foi enviado")
+             alert(`Produto ${alimentos.value} não encontrado, digite o mesmo nome que foi enviado`)
          }
      }).catch((error) => {
          alert("falha, error"+error);
