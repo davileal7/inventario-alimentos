@@ -23,7 +23,7 @@
 
  const db = getDatabase();
 //--------------Referencias----------------------------------------------//
- 
+
  var alimentos = document.getElementById("Alimentosbox")
  var unidade = document.getElementById("Secbox")
  var ml = document.getElementById("ml")
@@ -31,7 +31,6 @@
  var fabricado = document.getElementById("fabricado")
  var validade = document.getElementById("validade")
  var observacao = document.getElementById("obs")
-
 
  var Insbtn = document.getElementById("Insbtn")
  var selBtn = document.getElementById("Selbtn")
@@ -44,9 +43,7 @@
         alert("Preencha o nome do produto!");
         return;
       }
-
-      set(ref(db,"Produtos/" + alimentos.value 
-    ), {
+      set(ref(db,"Produtos/" + alimentos.value), {
         Estoque_Atual: unidade.value,
         Litros: ml.value,
         kg: kg.value,
@@ -58,8 +55,6 @@
     }).catch((error)=> {
         alert("falha, error"+error)
     })
-
-    
     alimentos.value = ""
     unidade.value = ""
     ml.value = ""
@@ -67,7 +62,6 @@
     fabricado.value = ""
     validade.value = ""
     observacao.value = ""
-
 }
 
 //--------------Select Datas----------------------------------------------//
@@ -85,13 +79,12 @@
              observacao.value = snapshot.val().Observacao;
          }
          else {
-             alert(`Produto ${alimentos.value} não encontrado, digite o mesmo nome que foi enviado`)
+             alert(`Produto ${alimentos.value} não encontrado, digite o mesmo nome que foi enviado.`)
          }
      }).catch((error) => {
          alert("falha, error"+error);
      })
  }
-
 
  Insbtn.addEventListener('click', InserirAlimento)
  selBtn.addEventListener('click', SelectData)
