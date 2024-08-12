@@ -16,8 +16,6 @@
  // Initialize Firebase
  const app = initializeApp(firebaseConfig);
 
-
-
  import {getDatabase, ref, get, set, child, update, remove}
  from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js"
 
@@ -40,7 +38,7 @@
  function InserirAlimento(){
 
     if (alimentos.value === '') {
-        alert("Preencha o nome do produto!");
+        alert("Preencha o nome do produto!!!");
         return;
       }
       set(ref(db,"Produtos/" + alimentos.value), {
@@ -51,7 +49,7 @@
         Validade: validade.value,
         Observacao: observacao.value
     }).then(() => {
-       alert("Produto Alimentos enviado") 
+       alert("Produto Alimentos enviado.") 
     }).catch((error)=> {
         alert("falha, error"+error)
     })
@@ -79,7 +77,7 @@
              observacao.value = snapshot.val().Observacao;
          }
          else {
-             alert(`Produto ${alimentos.value} não encontrado, digite o mesmo nome que foi enviado.`)
+             alert(`Produto NÃO encontrado, digite o mesmo nome que foi enviado.`)
          }
      }).catch((error) => {
          alert("falha, error"+error);
